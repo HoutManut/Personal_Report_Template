@@ -1,16 +1,11 @@
-// #include "sections/cover.typ"
 
-#set page(
-  numbering: "I",
-)
-
-#set text(
-  font: ("Times New Roman", "Siemreap"),
-  size: 12pt,
-)
-
+// Figures formatting
 #show figure.where(kind: image): set figure.caption(position: bottom)
 #show figure.where(kind: table): set figure.caption(position: top)
+#show figure.caption: set text(size: 10pt, style: "italic")
+
+#show link: set text(fill: blue)
+#show link: underline
 
 #let header-numbering(..number) = {
   let n = number.pos()
@@ -25,6 +20,15 @@
   }
 }
 
+#set page(
+  numbering: "I",
+)
+
+#set text(
+  font: ("Times New Roman", "Siemreap"),
+  size: 12pt,
+)
+
 #set heading()
 #show heading: it => {
   set text(size: 16pt)
@@ -38,8 +42,10 @@
 #set par(
   justify: true,
   first-line-indent: (amount: 0.5in, all: true),
-  leading: 1em, // or 0.8em
+  leading: 1em, // or 0.75em (leading spacing)
 )
+
+#set list(indent: 0.5in, body-indent: 1em)
 
 #include "sections/intro.typ"
 

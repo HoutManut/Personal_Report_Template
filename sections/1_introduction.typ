@@ -7,6 +7,8 @@
   caption: "IDT Logo",
 ) <IDT_Logo>
 
+@IDT_Logo　ウギウギウギう
+
 #figure(
   table(
     columns: (1fr, 1fr),
